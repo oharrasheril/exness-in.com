@@ -1,4 +1,4 @@
-/* Content Factory — main.js — Auto-generated */
+/* Content Factory — main.js v2.1 — Auto-generated */
 
 // ═══ Dynamic Year ═══
 document.addEventListener('DOMContentLoaded', function() {
@@ -51,8 +51,8 @@ function initShare(conf) {
       var platform = btn.getAttribute('data-platform');
       if (platform === 'copy') {
         navigator.clipboard.writeText(window.location.href).then(function() {
-          btn.textContent = '✅';
-          setTimeout(function() { btn.textContent = '🔗'; }, 2000);
+          btn.textContent = '\u2705';
+          setTimeout(function() { btn.textContent = '\uD83D\uDD17'; }, 2000);
         });
       } else if (links[platform]) {
         window.open(links[platform], '_blank', 'width=600,height=400');
