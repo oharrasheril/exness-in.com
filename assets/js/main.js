@@ -1,7 +1,7 @@
-/* Content Factory — main.js v2.1 — Auto-generated */
+/* Content Factory — main.js v3.0 — Auto-generated */
 
-// ═══ Dynamic Year ═══
 document.addEventListener('DOMContentLoaded', function() {
+  // ═══ Dynamic Year ═══
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -24,6 +24,20 @@ document.addEventListener('DOMContentLoaded', function() {
       if (input && searchOverlay.classList.contains('active')) input.focus();
     });
   }
+
+  // ═══ FAQ Accordion ═══
+  document.querySelectorAll('.faq-q').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = q.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(function(el) {
+        el.classList.remove('open');
+      });
+      // Toggle clicked
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
 
   // ═══ Share Buttons ═══
   var shareConf = null;
