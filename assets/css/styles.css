@@ -90,10 +90,13 @@ a:hover { color: var(--c-primary-dk); }
 .ct li { margin-bottom: 8px; font-size: 16px; }
 .ct a { color: var(--c-primary); border-bottom: 1px solid transparent; }
 .ct a:hover { border-bottom-color: var(--c-primary); }
-.ct blockquote { border-left: 4px solid var(--c-primary); padding: 16px 24px; margin: 24px 0; background: var(--c-primary-lt); border-radius: 0 var(--radius) var(--radius) 0; }
-.ct table { width: 100%; border-collapse: collapse; margin: 24px 0; }
-.ct th, .ct td { padding: 12px 16px; border: 1px solid var(--c-border); text-align: left; font-size: 15px; }
-.ct th { background: var(--c-primary-lt); font-weight: 600; }
+.ct blockquote { border-left: 4px solid var(--c-primary); padding: 20px 24px; margin: 28px 0; background: var(--c-surface); border-radius: 0 var(--radius) var(--radius) 0; font-size: 15px; color: var(--c-text2); line-height: 1.7; }
+.ct blockquote strong { color: var(--c-text); }
+.ct blockquote p { margin-bottom: 0; color: var(--c-text2); }
+.ct table { width: 100%; border-collapse: collapse; margin: 28px 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+.ct th, .ct td { padding: 14px 18px; border: 1px solid var(--c-border); text-align: left; font-size: 15px; }
+.ct th { background: var(--c-primary); color: white; font-weight: 600; border-color: var(--c-primary-dk); }
+.ct tr:nth-child(even) { background: var(--c-surface); }
 .ct img { border-radius: var(--radius); margin: 24px 0; }
 .ct hr { border: none; border-top: 1px solid var(--c-border); margin: 32px 0; }
 
@@ -128,8 +131,9 @@ a:hover { color: var(--c-primary-dk); }
 .sb-list a:hover { color: var(--c-primary); }
 
 /* ═══ CTA Inline (in-article) ═══ */
-.cta-inline { text-align: center; padding: 32px 24px; margin: 32px 0; background: linear-gradient(135deg, var(--c-primary-lt), var(--c-bg)); border-radius: var(--radius); border: 1px solid var(--c-border); }
-.cta-inline .btn-p, .cta-inline .btn-o { font-size: 16px; padding: 14px 32px; }
+.cta-inline { text-align: center; padding: 36px 24px; margin: 36px 0; background: linear-gradient(135deg, var(--c-primary-lt), var(--c-surface)); border-radius: var(--radius); border: 1px solid var(--c-border); }
+.cta-inline-text { font-size: 17px; font-weight: 600; color: var(--c-text); margin-bottom: 16px; }
+.cta-inline .btn-p { font-size: 16px; padding: 14px 36px; }
 
 /* ═══ Author ═══ */
 .auth { padding: 48px 0; }
