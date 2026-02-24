@@ -110,16 +110,17 @@ a:hover { color: var(--c-primary-dk); }
 .toc a:hover { color: var(--c-primary); }
 
 /* ═══ FAQ Accordion ═══ */
-.faq-section { margin: 48px 0; }
-.faq-section h2 { margin-bottom: 24px; }
-.faq-item { border: 1px solid var(--c-border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; }
-.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; cursor: pointer; font-weight: 600; font-size: 16px; color: var(--c-text); background: var(--c-bg); transition: background 0.2s; user-select: none; }
+.faq-section { margin: 48px 0 32px; }
+.faq-section h2 { font-family: var(--f-heading); font-size: 28px; font-weight: 700; margin-bottom: 24px; color: var(--c-text); }
+.faq-item { border: 1px solid var(--c-border); border-radius: var(--radius); margin-bottom: 12px; overflow: hidden; background: var(--c-bg); }
+.faq-q { display: flex; justify-content: space-between; align-items: center; padding: 18px 24px; cursor: pointer; font-weight: 600; font-size: 16px; color: var(--c-text); background: var(--c-bg); transition: background 0.2s; user-select: none; gap: 16px; }
 .faq-q:hover { background: var(--c-surface); }
-.faq-q::after { content: '+'; font-size: 22px; font-weight: 300; color: var(--c-text2); transition: transform 0.3s; flex-shrink: 0; margin-left: 16px; }
+.faq-q::after { content: '+'; font-size: 24px; font-weight: 300; color: var(--c-primary); transition: transform 0.3s; flex-shrink: 0; width: 24px; text-align: center; }
+.faq-item.open .faq-q { background: var(--c-surface); border-bottom: 1px solid var(--c-border); }
 .faq-item.open .faq-q::after { content: '−'; }
-.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
-.faq-a-inner { padding: 0 24px 20px; color: var(--c-text2); font-size: 15px; line-height: 1.7; }
-.faq-item.open .faq-a { max-height: 500px; }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+.faq-a-inner { padding: 18px 24px; color: var(--c-text2); font-size: 15px; line-height: 1.7; }
+.faq-item.open .faq-a { max-height: 600px; }
 
 /* ═══ Sidebar (Sticky) ═══ */
 .sb { position: sticky; top: 88px; align-self: start; max-height: calc(100vh - 100px); overflow-y: auto; }
